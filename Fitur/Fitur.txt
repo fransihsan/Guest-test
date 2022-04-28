@@ -1,0 +1,8 @@
+Fitur yang sudah tercapai
+
+- Login and Register
+- CRUD List Guest
+
+Rencana Fitur yang akan ditambahkan
+
+- add photo profil guest
