@@ -2,8 +2,8 @@ package routes
 
 import (
 	"final-project/deliveries/controllers/auth"
-	"final-project/deliveries/controllers/user"
 	"final-project/deliveries/controllers/guest"
+	"final-project/deliveries/controllers/user"
 	"final-project/deliveries/middlewares"
 
 	"github.com/labstack/echo/v4"
