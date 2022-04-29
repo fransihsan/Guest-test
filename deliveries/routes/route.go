@@ -24,9 +24,9 @@ func RegisterPaths(e *echo.Echo, ac *auth.AuthController, uc *user.UserControlle
 	// User Route
 	u := e.Group("/users")
 	u.POST("", uc.Create())
+	u.GET("/list", uc.GetAllUsers())
 	uj := u.Group("/jwt")
 	uj.Use(middlewares.JWTMiddleware())
-	u.GET("", uc.GetAllUsers())
 	uj.GET("/:id", uc.GetByID())
 	uj.GET("/me", uc.Get())
 	uj.PUT("/me", uc.Update())
