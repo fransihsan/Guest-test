@@ -35,8 +35,8 @@ func RegisterPaths(e *echo.Echo, ac *auth.AuthController, uc *user.UserControlle
 	// Guest Route
 	g := e.Group("/guest")
 	g.Use(middlewares.JWTMiddleware())
-	g.POST("", gc.Create())
 	g.GET("", gc.GetAll())
+	g.POST("", gc.Create())
 	g.GET("/me", gc.GetByUserID())
 	g.PUT("/:id", gc.Update())
 	g.DELETE("/:id", gc.Delete())
